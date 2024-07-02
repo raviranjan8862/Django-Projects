@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movies</title>
+    <link rel="stylesheet" href="{% static 'css/file.css' %}">
+</head>
+<body>
+    <h1>{{head_msg}} </h1>
+    <ul>
+        <li>{{sub_msg1}}</li>
+        <li>{{sub_msg2}}</li>
+        <li>{{sub_msg3}}</li>
+    </ul>
+    {% if type == 'movies' %}
+    <img src="{% static 'images/pathan_img.jpeg'%}" alt="upload soon!!!">
+    <img src="{% static 'images/om.jpeg'%}" alt="upload soon!!!" >
+    <img src="{% static 'images/pushpa_img.jpeg'%}" alt="upload soon!!!" >
+    {% elif type == 'sports'%}
+    <img src="{% static 'images/test_img.jpeg'%}" alt="upload soon!!!">
+    <img src="{% static 'images/worldcup_img.jpeg'%}" alt="upload soon!!!" >
+    <img src="{% static 'images/neeraj_img.jpeg'%}" alt="upload soon!!!" >
+
+    {% elif type == 'politics'%}
+    <img src="{% static 'images/rahul_img.jpeg'%}" alt="upload soon!!!">
+    <img src="{% static 'images/modi_img.jpeg'%}" alt="upload soon!!!" >
+    <img src="{% static 'images/yogi_img.jpeg'%}" alt="upload soon!!!" >
+
+    {% endif %}
+</body>
+</html>
