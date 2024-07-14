@@ -1,0 +1,36 @@
+{% extends "layout.html"%}
+
+{% block title %}
+
+Image Gallery
+
+{% endblock %}
+
+
+{% block content %}
+ 
+<h1 class="text-center mt-4">  Gallery </h1>
+
+<a href="{% url 'upload_image' %}"  class="btn btn-primary text-center mt-4 mb-4">Upload New Image</a>
+
+
+<div class="container row gap-3">
+ 
+    {% for image in images  %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{ image.image.url }}" class="img-fluid h-100 border" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{image.title}}</h5>
+          <p class="card-text">{{image.description}}</p>
+          <p>Uploaded at: {{ image.uploaded_at }}</p>
+        </div>
+       
+      </div>    
+    
+    {% endfor %}
+
+</div>
+
+
+
+{% endblock %}
