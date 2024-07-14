@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'newsDB',
-        'USER':'root',
+        'USER':'newsdbuser',
         'PASSWORD':'Rajput@09',
         'HOST':'localhost',
         'PORT':'3306',
